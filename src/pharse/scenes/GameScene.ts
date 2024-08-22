@@ -1,6 +1,8 @@
 import { BoxComponent } from "../ui/BoxComponent";
 import { CardComponent } from "../ui/CardComponent";
 // import glowParticlesFrag from "../ui/glowParticles.frag";
+import bg from "../../assets/bg.png";
+import card from "../../assets/card.png";
 
 export class GameScene extends Phaser.Scene {
   constructor() {
@@ -8,8 +10,8 @@ export class GameScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("backgroundImage", "/assets/bg.png");
-    this.load.image("cardBackgroundImage", "/assets/card.png");
+    this.load.image("backgroundImage", bg);
+    this.load.image("cardBackgroundImage", card);
     // this.load.glsl("glowParticles", glowParticlesFrag); // 加载 Shader
   }
 

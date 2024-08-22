@@ -1,4 +1,5 @@
 import { CardComponent } from "../ui/CardComponent";
+import card from "../../assets/card.png";
 
 export class ExtractCardScene extends Phaser.Scene {
   constructor() {
@@ -6,7 +7,7 @@ export class ExtractCardScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("cardBackgroundImage", "/assets/card.png");
+    this.load.image("cardBackgroundImage", card);
   }
 
   create() {

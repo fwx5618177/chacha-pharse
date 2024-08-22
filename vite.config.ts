@@ -36,6 +36,18 @@ export default defineConfig({
     outDir: "dist",
     assetsInlineLimit: 0,
     chunkSizeWarningLimit: 1024,
+    rollupOptions: {
+      output: {
+        entryFileNames: "[name].js",
+        chunkFileNames: "[name].js",
+        assetFileNames: ({ name }) => {
+          if (/\.(gif|jpe?g|png|svg)$/.test(name ?? "")) {
+            return "assets/[name][extname]";
+          }
+          return "[name][extname]";
+        },
+      },
+    },
   },
   server: {
     open: true,

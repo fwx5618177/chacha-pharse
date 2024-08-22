@@ -1,4 +1,5 @@
 import { ButtonComponent } from "../ui/ButtonComponent";
+import blue from "../../assets/blue.png";
 
 export class WalletConnectScene extends Phaser.Scene {
   private walletButton: ButtonComponent | null = null;
@@ -8,7 +9,7 @@ export class WalletConnectScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("buttonBg", "/assets/blue.png");
+    this.load.image("buttonBg", blue);
   }
 
   create() {
