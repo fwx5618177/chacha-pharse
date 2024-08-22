@@ -36,10 +36,6 @@ export default defineConfig({
     outDir: "dist",
     assetsInlineLimit: 0,
     chunkSizeWarningLimit: 1024,
-    rollupOptions: {
-      external: ["react", "react-dom", "web3", "@solana/web3.js"],
-      output: {},
-    },
   },
   server: {
     open: true,
