@@ -1,0 +1,37 @@
+{
+  "name": "chacha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "concurrently \"npm run expose\" \"vite\"",
+    "start": "concurrently \"npm run expose\" \"vite\"",
+    "build": "vite build",
+    "expose": "env-cmd -f .env node ./expose-localhost.js"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@ngrok/ngrok": "^0.9.1",
+    "@types/node": "^22.5.0",
+    "@types/telegram-web-app": "^7.8.0",
+    "buffer": "^6.0.3",
+    "concurrently": "^8.2.0",
+    "env-cmd": "^10.1.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "5.1.6",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^4.0.3",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  },
+  "dependencies": {
+    "@ton/phaser-sdk": "^0.0.1-beta.1",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "@vkruglikov/react-telegram-web-app": "^2.1.9",
+    "phaser": "^3.60.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
