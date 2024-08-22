@@ -15,5 +15,5 @@
     "declarationDir": "dist",
     "sourceMap": true
   },
-  "include": ["src"]
+  "include": ["src", "src/types/glsl.d.ts"]
 }

@@ -27,20 +27,20 @@ export class ButtonComponent extends Phaser.GameObjects.Container {
       .setOrigin(0.5, 0.5);
 
     this.add([background, text]);
-    this.setSize(background.width, background.height);
 
+    this.setSize(background.width, background.height);
     this.setInteractive(
       new Phaser.Geom.Rectangle(0, 0, background.width, background.height),
       Phaser.Geom.Rectangle.Contains
     );
 
     this.on("pointerover", () => {
-      background.setAlpha(0.8);
+      background.setAlpha(0.8); // 鼠标悬停效果
     })
       .on("pointerout", () => {
-        background.setAlpha(1);
+        background.setAlpha(1); // 鼠标移出效果
       })
-      .on("pointerdown", callback);
+      .on("pointerdown", callback); // 鼠标或触摸点击
 
     scene.add.existing(this);
   }

@@ -1,5 +1,6 @@
 import dts from "vite-plugin-dts";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
+import glsl from "rollup-plugin-glsl";
 
 import { defineConfig } from "vite";
 
@@ -18,6 +19,10 @@ export default defineConfig({
         Buffer: true,
         global: true,
       },
+    }),
+    glsl({
+      include: "**/*.{glsl,frag,vert}",
+      exclude: "node_modules/**",
     }),
   ],
   resolve: {
