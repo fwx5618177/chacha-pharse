@@ -11,7 +11,7 @@ export default defineConfig({
   plugins: [
     dts({
       insertTypesEntry: true,
-      outDir: "lib",
+      outDir: "dist",
       include: "./src/**/*",
     }),
     nodePolyfills({
@@ -33,19 +33,12 @@ export default defineConfig({
   build: {
     sourcemap: true,
     minify: "esbuild",
-    outDir: "lib",
+    outDir: "dist",
     assetsInlineLimit: 0,
     chunkSizeWarningLimit: 1024,
     rollupOptions: {
       external: ["react", "react-dom", "web3", "@solana/web3.js"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          web3: "Web3",
-          "@solana/web3.js": "Web3",
-        },
-      },
+      output: {},
     },
   },
   server: {
